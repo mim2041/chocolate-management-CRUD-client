@@ -6,21 +6,22 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Header from './component/Header';
+
+import Home from './component/Home';
 import AddChocolate from './component/AddChocolate';
-import ChocolateTable from './component/ChocolateTable';
+import Main from './component/Main';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Header></Header>,
+    element: <Main></Main>,
     children: [
       {
         path: '/',
-        element: <ChocolateTable></ChocolateTable>
+        element: <Home></Home>
       },
       {
-        path: '/add',
+        path: '/addChocolate',
         element: <AddChocolate></AddChocolate>
       }
     ]
