@@ -10,6 +10,7 @@ import {
 import Home from './component/Home';
 import AddChocolate from './component/AddChocolate';
 import Main from './component/Main';
+import UpdateChocolate from './component/UpdateChocolate';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,11 @@ const router = createBrowserRouter([
       {
         path: '/addChocolate',
         element: <AddChocolate></AddChocolate>
+      },
+      {
+        path: '/updateChocolate/:id',
+        element: <UpdateChocolate></UpdateChocolate>,
+        loader: ({params}) => fetch(`http://localhost:5000/chocolate/${params.id}`)
       }
     ]
   },

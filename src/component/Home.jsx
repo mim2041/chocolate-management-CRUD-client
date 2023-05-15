@@ -1,12 +1,13 @@
 import { FaPlus } from 'react-icons/fa';
 import { Link, useLoaderData } from 'react-router-dom';
 import ChocolateTable from './ChocolateTable';
+import { useState } from 'react';
 
 
 const Home = () => {
-    const chocolates = useLoaderData();
-
-    
+    const loadedChocolates = useLoaderData();
+    const [chocolates, setChocolates] = useState(loadedChocolates);
+    // console.log(chocolates)
     
     return (
         <div className='mx-40 my-24'>
@@ -33,6 +34,8 @@ const Home = () => {
         chocolates.map(chocolate => <ChocolateTable
         key={chocolate._id}
         chocolate={chocolate}
+        chocolates={chocolates}
+        setChocolates={setChocolates}
         ></ChocolateTable>)
       }
     
