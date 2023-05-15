@@ -7,7 +7,7 @@ const UpdateChocolate = () => {
 
     const chocolates = useLoaderData();
 
-    const {_id, name, country, category, photo} = chocolates;
+    const {_id, name, country, photo} = chocolates;
 
     const handleUpdateChocolate = event => {
         event.preventDefault();
