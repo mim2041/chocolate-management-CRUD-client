@@ -11,8 +11,10 @@ const AddChocolate = () => {
         const name = form.name.value;
         const country = form.country.value;
         const category = form.category.value;
-        const newChocolate = {name, country, category};
+        const photo = form.photo.value;
+        const newChocolate = {name, country, category, photo};
         console.log(newChocolate);
+        form.reset();
 
         fetch('http://localhost:5000/chocolate', {
             method: "POST",
@@ -61,6 +63,14 @@ const AddChocolate = () => {
                     </label>
                     <label className="w-full">
                         <input type="text" placeholder="Enter Country Name" name="country" className="input input-bordered w-full" />
+                    </label>
+                </div>
+                <div className="form-control mb-8">
+                    <label className="label">
+                        <span className="label-text font-bold">Photo URL</span>
+                    </label>
+                    <label className="w-full">
+                        <input type="text" placeholder="Photo URL" name="photo" className="input input-bordered w-full" />
                     </label>
                 </div>
                 <div className="form-control mb-8">
