@@ -19,29 +19,29 @@ const Home = () => {
             </Link>
             <div>
             <div className="overflow-x-auto w-full ">
-  <table className="table w-full">
-    {/* head */}
-    <thead>
-      <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Country</th>
-        <th>Category</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-      {
-        chocolates.map(chocolate => <ChocolateTable
-        key={chocolate._id}
-        chocolate={chocolate}
-        chocolates={chocolates}
-        setChocolates={setChocolates}
-        ></ChocolateTable>)
-      }
-    
-    
-  </table>
-</div>
+                <table className="table w-full">
+                  {/* head */}
+                  <thead>
+                    <tr>
+                      <th>Image</th>
+                      <th>Name</th>
+                      <th>Country</th>
+                      <th>Category</th>
+                      <th>Action</th>
+                    </tr>
+                  </thead>
+                    {
+                      chocolates.map(chocolate => <ChocolateTable
+                      key={chocolate._id}
+                      chocolate={chocolate}
+                      chocolates={chocolates}
+                      setChocolates={setChocolates}
+                      ></ChocolateTable>)
+                    }
+                  
+                  
+                </table>
+              </div>
             </div>
         </div>
     );
